@@ -1,0 +1,70 @@
+---
+const services = [
+  {
+    image:
+      "http://unicord.themezinho.net/wp-content/uploads/2018/12/icon01-1.png",
+    title: "USER INTERFACE & EXPERIENCE",
+    subtitle: "USER INTERFACE & EXPERIENCE",
+    description: "Unicord provides a fantastic living experience.",
+    linkText: "LEARN MORE",
+  },
+  {
+    image:
+      "http://unicord.themezinho.net/wp-content/uploads/2018/12/icon02-1.png",
+    title: "USER FRIENDLY CMS SYSTEMS",
+    subtitle: "USER FRIENDLY CMS SYSTEMS",
+    description: "Unicord provides a fantastic living experience.",
+    linkText: "LEARN MORE",
+  },
+  {
+    image:
+      "http://unicord.themezinho.net/wp-content/uploads/2018/12/icon03-1.png",
+    title: "DIGITAL MEDIA MARKETTING",
+    subtitle: "DIGITAL MEDIA MARKETTING",
+    description: "Unicord provides a fantastic living experience.",
+    linkText: "LEARN MORE",
+  },
+  {
+    image:
+      "http://unicord.themezinho.net/wp-content/uploads/2018/12/icon02-1.png",
+    title: "MOBILE APPLICATIONS ANDROID & IOS",
+    subtitle: "MOBILE APPLICATIONS ANDROID & IOS",
+    description: "Unicord provides a fantastic living experience.",
+    linkText: "LEARN MORE",
+  },
+  {
+    image:
+      "http://unicord.themezinho.net/wp-content/uploads/2018/12/icon03-1.png",
+    title: "VIDEO EDITION & TV COMMERCIALS",
+    subtitle: "VIDEO EDITION & TV COMMERCIALS",
+    description: "Unicord provides a fantastic living experience.",
+    linkText: "LEARN MORE",
+  },
+];
+---
+
+<section
+  class="grid grid-cols-1 md:grid-cols-2 px-8 bg-white justify-center items-start p-16 gap-8 mx-auto container"
+>
+  <div class="flex justify-start items-start flex-col">
+    <h1 class="text-6xl font-bold uppercase mb-8">BENEFITS WITH UNICORDS</h1>
+    <p class="text-4xl font-light">
+      All of our products exist to help you customize your website and add some
+      advanced functionality lacks.
+    </p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 md:px-8 gap-4">
+    {
+      services.map(({ image, title, description, linkText }) => (
+        <div class="flex flex-col justify-center items-start p-4 ">
+          <img src={image} alt={title} />
+          <h2>{title}</h2>
+          <p>{description}</p>
+          <a href="#" class="text-blue-500">
+            {linkText}
+          </a>
+        </div>
+      ))
+    }
+  </div>
+</section>
